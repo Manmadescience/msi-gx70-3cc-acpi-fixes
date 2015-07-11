@@ -3813,6 +3813,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 }
                             }
                         }
+			Return (0)
                     }
 
                     Method (_REG, 2, NotSerialized)  // _REG: Region Availability
@@ -4836,6 +4837,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TDBB, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WQAB, 1, NotSerialized)
@@ -4863,6 +4865,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TD2C, Local1)
                                 Return (Local1)
                             }
+			    Return (0)
                         }
 
                         Method (WQAC, 1, NotSerialized)
@@ -4884,6 +4887,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TDBF, Local2)
                                 Return (Local2)
                             }
+			    Return (0)
                         }
 
                         Method (WQAD, 1, NotSerialized)
@@ -4983,6 +4987,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TD4E, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WQAE, 1, NotSerialized)
@@ -5070,6 +5075,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TD66, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WQAF, 1, NotSerialized)
@@ -5187,6 +5193,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TD79, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WQAG, 1, NotSerialized)
@@ -5298,6 +5305,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TD90, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WQAH, 1, NotSerialized)
@@ -5427,6 +5435,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TDE3, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WQAI, 1, NotSerialized)
@@ -5479,6 +5488,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (TDC8, Local0)
                                 Return (Local0)
                             }
+			    Return (0)
                         }
 
                         Method (WSAA, 2, NotSerialized)
@@ -5686,6 +5696,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TDBB)
                                 Return (TDBB)
                             }
+			    Return (0)
                         }
 
                         Method (WSAB, 2, NotSerialized)
@@ -5713,6 +5724,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TD2C)
                                 Return (TD2C)
                             }
+			    Return (0)
                         }
 
                         Method (WSAC, 2, NotSerialized)
@@ -5734,6 +5746,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TDBF)
                                 Return (TDBF)
                             }
+			    Return (0)
                         }
 
                         Method (WSAD, 2, NotSerialized)
@@ -5833,6 +5846,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TD4E)
                                 Return (TD4E)
                             }
+			    Return (0)
                         }
 
                         Method (WSAE, 2, NotSerialized)
@@ -5920,6 +5934,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TD66)
                                 Return (TD66)
                             }
+			    Return (0)
                         }
 
                         Method (WSAF, 2, NotSerialized)
@@ -6037,6 +6052,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TD79)
                                 Return (TD79)
                             }
+			    Return (0)
                         }
 
                         Method (WSAG, 2, NotSerialized)
@@ -6148,6 +6164,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TD90)
                                 Return (TD90)
                             }
+			    Return (0)
                         }
 
                         Method (WSAH, 2, NotSerialized)
@@ -6277,6 +6294,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TDE3)
                                 Return (TDE3)
                             }
+			    Return (0)
                         }
 
                         Method (WSAI, 2, NotSerialized)
@@ -6328,6 +6346,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                 Store (Arg1, TDC8)
                                 Return (TDC8)
                             }
+			    Return (0)
                         }
 
                         Method (_WED, 1, NotSerialized)  // _Wxx: Wake Event
@@ -8331,6 +8350,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         }
 
                         Store (Local0, ^^^SBRG.EC.BRLV)
+			Return (0)
                     }
 
                     Name (PBCL, Package (0x0B)
