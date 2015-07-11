@@ -4448,7 +4448,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
                     Device (SCM0)
                     {
-                        Name (_HID, "pnp0c14")  // _HID: Hardware ID
+                        Name (_HID, "PNP0C14")  // _HID: Hardware ID
                         Name (_UID, Zero)  // _UID: Unique ID
                         Name (TDVR, 0x14)
                         Name (_WDG, Buffer (0xC8)
