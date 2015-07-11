@@ -8433,7 +8433,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     Mutex (MUTE, 0x00)
                     Method (RBPE, 1, NotSerialized)
                     {
-                        Acquire (MUTE, 0x03E8)
+                        Acquire (MUTE, 0xFFFF)
                         Add (Arg0, PEBS, Local0)
                         OperationRegion (PCFG, SystemMemory, Local0, One)
                         Field (PCFG, ByteAcc, NoLock, Preserve)
@@ -9086,7 +9086,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 Store (CDW3, CTRL)
                 If (LNotEqual (And (SUPP, 0x16), 0x16))
                 {
-                    And (CTRL, 0x1E)
+                    And (CTRL, 0x1E, CTRL)
                 }
 
                 If (LNot (PEHP))
