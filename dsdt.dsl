@@ -2261,7 +2261,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     0x02000000,         // Range Minimum
                     0xFFDFFFFF,         // Range Maximum
                     0x00000000,         // Translation Offset
-                    0xFDFC0000,         // Length
+                    0xFDE00000,         // Length
                     ,, _Y04, AddressRangeMemory, TypeStatic)
                 QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, Cacheable, ReadWrite,
                     0x0000000000000000, // Granularity
