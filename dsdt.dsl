@@ -2379,15 +2379,15 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     Add (MIN3, Decrement (Local0), MAX3)
                     If (LOr (MALH, MALL))
                     {
-                        CreateDWordField (CRS1, \_SB.PCI0._Y05._MIN, MN8L)  // _MIN: Minimum Base Address
+                        CreateQWordField (CRS1, \_SB.PCI0._Y05._MIN, MN8L)  // _MIN: Minimum Base Address
                         Add (0xB4, 0x04, Local0)
                         CreateDWordField (CRS1, Local0, MN8H)
                         Store (MABL, MN8L)
                         Store (MABH, MN8H)
-                        CreateDWordField (CRS1, \_SB.PCI0._Y05._MAX, MX8L)  // _MAX: Maximum Base Address
+                        CreateQWordField (CRS1, \_SB.PCI0._Y05._MAX, MX8L)  // _MAX: Maximum Base Address
                         Add (0xBC, 0x04, Local1)
                         CreateDWordField (CRS1, Local1, MX8H)
-                        CreateDWordField (CRS1, \_SB.PCI0._Y05._LEN, LN8L)  // _LEN: Length
+                        CreateQWordField (CRS1, \_SB.PCI0._Y05._LEN, LN8L)  // _LEN: Length
                         Add (0xCC, 0x04, Local2)
                         CreateDWordField (CRS1, Local2, LN8H)
                         Store (MABL, MN8L)
@@ -2441,13 +2441,13 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     Add (MIN5, Decrement (Local1), MAX5)
                     If (LOr (MALH, MALL))
                     {
-                        CreateDWordField (CRS2, \_SB.PCI0._Y0B._MIN, MN9L)  // _MIN: Minimum Base Address
+                        CreateQWordField (CRS2, \_SB.PCI0._Y0B._MIN, MN9L)  // _MIN: Minimum Base Address
                         Add (0x72, 0x04, Local0)
                         CreateDWordField (CRS2, Local0, MN9H)
-                        CreateDWordField (CRS2, \_SB.PCI0._Y0B._MAX, MX9L)  // _MAX: Maximum Base Address
+                        CreateQWordField (CRS2, \_SB.PCI0._Y0B._MAX, MX9L)  // _MAX: Maximum Base Address
                         Add (0x7A, 0x04, Local1)
                         CreateDWordField (CRS2, Local1, MX9H)
-                        CreateDWordField (CRS2, \_SB.PCI0._Y0B._LEN, LN9L)  // _LEN: Length
+                        CreateQWordField (CRS2, \_SB.PCI0._Y0B._LEN, LN9L)  // _LEN: Length
                         Add (0x8A, 0x04, Local2)
                         CreateDWordField (CRS2, Local2, LN9H)
                         Store (MABL, MN9L)
