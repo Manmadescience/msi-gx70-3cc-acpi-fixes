@@ -9625,7 +9625,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
             VROM,   524288
         }
 
-        Name (TVGA, Buffer (0xFA00)
+        Name (TVGA, Buffer (0x10000)
         {
              0x00
         })
