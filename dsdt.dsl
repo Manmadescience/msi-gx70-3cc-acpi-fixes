@@ -3221,7 +3221,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                                     CreateWordField (CRS, \_SB.PCI0.S900._Y0F._MIN, SMB0)  // _MIN: Minimum Base Address
                                     CreateWordField (CRS, \_SB.PCI0.S900._Y0F._MAX, SMH0)  // _MAX: Maximum Base Address
                                     CreateByteField (CRS, \_SB.PCI0.S900._Y0F._LEN, SML0)  // _LEN: Length
-                                    Store (SMB0, SMB0)
+                                    // arbitrarily clear min base address
+                                    Store (SMB0, Local1)
+                                    Store (Local1, SMB0)
                                     Store (SMB0, SMH0)
                                     Store (SMBM, SML0)
                                 }
@@ -3975,7 +3977,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             }
                         }
 
-                        Name (_HID, "KB9XRADIOBTN")  // _HID: Hardware ID
+                        Name (_HID, "KB9X0001")  // _HID: Hardware ID
                         Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
                         {
                             Memory32Fixed (ReadWrite,
@@ -4121,6 +4123,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             Store (Zero, Local1)
                             Store (Zero, Local2)
                             Store (Zero, Local3)
+                            // use Local3 to avoid iasl warning: Method Local is set but never used
+                            And(Local3, Ones, Local3)
                             Store (MDCH, Local0)
                             Store (MDCL, Local1)
                             ShiftLeft (Local0, 0x08, Local0)
@@ -4159,6 +4163,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             Store (Zero, Local3)
                             Store (Zero, Local4)
                             Store (Zero, Local7)
+                            // use Local7 to avoid iasl warning: Method Local is set but never used
+                            And(Local7, Ones, Local7)
                             Store (MBTS, Local0)
                             If (LEqual (Local0, One))
                             {
@@ -7753,6 +7759,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             Else
                             {
                                 Store (^VGA.DVID, Local7)
+                                // use Local7 to avoid iasl warning: Method Local is set but never used
+                                And(Local7, Ones, Local7)
                                 Sleep (0x05)
                                 Decrement (Local5)
                             }
@@ -8280,6 +8288,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         If (LEqual (AF7E, 0x80000001))
                         {
                             Divide (Multiply (Arg0, 0xFF), 0x64, Local1, Local0)
+                            // use Local1 to avoid iasl warning: Method Local is set but never used
+                            And(Local1, Ones, Local1)
                             AFN7 (Local0)
                             Store (Arg0, BRTS)
                         }
@@ -8597,6 +8607,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
             INTC (0x1F)
             INTD (0x1F)
             Store (PD64, Local1)
+            // use Local1 to avoid iasl warning: Method Local is set but never used
+            And(Local1, Ones, Local1)
             Store (0x1F, PIRE)
             Store (0x1F, PIRF)
             Store (0x1F, PIRG)
