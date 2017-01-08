@@ -1,0 +1,9 @@
+addons:
+    apt:
+        packages:
+            - iasl
+
+language: bash
+
+script:
+    - iasl -tc dsdt.dsl
