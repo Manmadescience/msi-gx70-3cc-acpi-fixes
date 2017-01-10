@@ -2,7 +2,7 @@
  * Intel ACPI Component Architecture
  * AML Disassembler version 20130117-64 [Jul 11 2015]
  * Copyright (c) 2000 - 2013 Intel Corporation
- * 
+ *
  * Disassembly of dsdt.dat, Sat Jul 11 16:21:23 2015
  *
  * Original Table Header:
@@ -229,7 +229,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
     Name (PRWP, Package (0x02)
     {
-        Zero, 
+        Zero,
         Zero
     })
     Method (GPRW, 2, NotSerialized)
@@ -261,7 +261,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
     Name (WAKP, Package (0x02)
     {
-        Zero, 
+        Zero,
         Zero
     })
     OperationRegion (DEB0, SystemIO, 0x80, One)
@@ -294,9 +294,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
     OperationRegion (ACMS, SystemIO, 0x72, 0x10)
     Field (ACMS, ByteAcc, NoLock, Preserve)
     {
-        ICMS,   8, 
-        DCMS,   8, 
-        Offset (0x0E), 
+        ICMS,   8,
+        DCMS,   8,
+        Offset (0x0E),
         P80,    8
     }
 
@@ -306,239 +306,239 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
     OperationRegion (CMPT, SystemIO, 0x0C50, 0x03)
     Field (CMPT, ByteAcc, NoLock, Preserve)
     {
-        CMID,   8, 
-            ,   6, 
-        GPCT,   2, 
-        GP0I,   1, 
-        GP1I,   1, 
-        GP2I,   1, 
-        GP3I,   1, 
-        GP4I,   1, 
-        GP5I,   1, 
-        GP6I,   1, 
+        CMID,   8,
+            ,   6,
+        GPCT,   2,
+        GP0I,   1,
+        GP1I,   1,
+        GP2I,   1,
+        GP3I,   1,
+        GP4I,   1,
+        GP5I,   1,
+        GP6I,   1,
         GP7I,   1
     }
 
     OperationRegion (PCFG, SystemMemory, PCIE, 0x02000000)
     Field (PCFG, AnyAcc, NoLock, Preserve)
     {
-        Offset (0x20078), 
-        Offset (0x2007A), 
-        PMSA,   1, 
-        Offset (0x28078), 
-        Offset (0x2807A), 
-        PMSB,   1, 
-        Offset (0x48078), 
-        Offset (0x4807A), 
-        PMSC,   1, 
-        Offset (0x8800A), 
-        STCL,   16, 
-        Offset (0x880FC), 
-        RMBA,   32, 
-        Offset (0xA0004), 
-        SMIE,   1, 
-        SMME,   1, 
-        Offset (0xA0008), 
-        RVID,   8, 
-        Offset (0xA0014), 
-        SMB1,   32, 
-        Offset (0xA0082), 
-            ,   2, 
-        G31O,   1, 
-        Offset (0xA00E1), 
-            ,   6, 
-        ACIR,   1, 
-        Offset (0xA4004), 
-        PCMD,   2, 
-        Offset (0xA807A), 
-        PMS0,   1, 
-        Offset (0xA8088), 
-        TLS0,   4, 
-        Offset (0xA907A), 
-        PMS1,   1, 
-        Offset (0xA9088), 
-        TLS1,   4, 
-        Offset (0xAA07A), 
-        PMS2,   1, 
-        Offset (0xAA088), 
-        TLS2,   4, 
-        Offset (0xAB07A), 
-        PMS3,   1, 
-        Offset (0xAB088), 
+        Offset (0x20078),
+        Offset (0x2007A),
+        PMSA,   1,
+        Offset (0x28078),
+        Offset (0x2807A),
+        PMSB,   1,
+        Offset (0x48078),
+        Offset (0x4807A),
+        PMSC,   1,
+        Offset (0x8800A),
+        STCL,   16,
+        Offset (0x880FC),
+        RMBA,   32,
+        Offset (0xA0004),
+        SMIE,   1,
+        SMME,   1,
+        Offset (0xA0008),
+        RVID,   8,
+        Offset (0xA0014),
+        SMB1,   32,
+        Offset (0xA0082),
+            ,   2,
+        G31O,   1,
+        Offset (0xA00E1),
+            ,   6,
+        ACIR,   1,
+        Offset (0xA4004),
+        PCMD,   2,
+        Offset (0xA807A),
+        PMS0,   1,
+        Offset (0xA8088),
+        TLS0,   4,
+        Offset (0xA907A),
+        PMS1,   1,
+        Offset (0xA9088),
+        TLS1,   4,
+        Offset (0xAA07A),
+        PMS2,   1,
+        Offset (0xAA088),
+        TLS2,   4,
+        Offset (0xAB07A),
+        PMS3,   1,
+        Offset (0xAB088),
         TLS3,   4
     }
 
     OperationRegion (PMIO, SystemIO, 0x0CD6, 0x02)
     Field (PMIO, ByteAcc, NoLock, Preserve)
     {
-        INPM,   8, 
+        INPM,   8,
         DAPM,   8
     }
 
     IndexField (INPM, DAPM, ByteAcc, NoLock, Preserve)
     {
-        Offset (0x24), 
-        MMSO,   32, 
-        Offset (0x50), 
-        HPAD,   32, 
-        Offset (0x60), 
+        Offset (0x24),
+        MMSO,   32,
+        Offset (0x50),
+        HPAD,   32,
+        Offset (0x60),
         P1EB,   16
     }
 
     OperationRegion (ERMM, SystemMemory, MMSO, 0x1000)
     Field (ERMM, AnyAcc, NoLock, Preserve)
     {
-        Offset (0x105), 
-            ,   5, 
-        G06E,   1, 
-        G06O,   1, 
-        G06I,   1, 
-        G07B,   8, 
-        Offset (0x10A), 
-        G0BB,   8, 
-        Offset (0x10D), 
-        G0EB,   8, 
-        Offset (0x113), 
-            ,   5, 
-        G14E,   1, 
-        G14O,   1, 
-        G14I,   1, 
-            ,   5, 
-        G15E,   1, 
-        G15O,   1, 
-        G15I,   1, 
-        Offset (0x11B), 
-            ,   7, 
-        G1CI,   1, 
-        Offset (0x11F), 
-            ,   7, 
-        G20I,   1, 
-        Offset (0x122), 
-            ,   5, 
-        G23E,   1, 
-        G23O,   1, 
-        G23I,   1, 
-        Offset (0x12B), 
-            ,   5, 
-        G2CE,   1, 
-        G2CO,   1, 
-        G2CI,   1, 
-            ,   5, 
-        G2DE,   1, 
-        G2DO,   1, 
-        G2DI,   1, 
-        Offset (0x132), 
-            ,   5, 
-        G33E,   1, 
-        G33O,   1, 
-        G33I,   1, 
-        Offset (0x134), 
-            ,   5, 
-        G35E,   1, 
-        G35O,   1, 
-        Offset (0x136), 
-            ,   5, 
-        G37E,   1, 
-        G37O,   1, 
-        G37I,   1, 
-        Offset (0x13F), 
-            ,   7, 
-        G40I,   1, 
-        Offset (0x164), 
-            ,   7, 
-        GE05,   1, 
-            ,   7, 
-        GE06,   1, 
-        Offset (0x16E), 
-            ,   7, 
-        GE15,   1, 
-            ,   7, 
-        GE16,   1, 
-        Offset (0x175), 
-            ,   7, 
-        GE22,   1, 
-        Offset (0x1A9), 
-            ,   5, 
-        GAAE,   1, 
-        GAAO,   1, 
-        GAAI,   1, 
-            ,   5, 
-        GABE,   1, 
-        GABO,   1, 
-        Offset (0x1AE), 
-        GAFB,   8, 
-        GB0B,   8, 
-        Offset (0x1FF), 
-            ,   9, 
-        GESA,   1, 
-        Offset (0x207), 
-            ,   5, 
-        E05C,   1, 
-        E06C,   1, 
-        Offset (0x208), 
-        E08C,   1, 
-        E09C,   1, 
-        Offset (0x209), 
-        E10C,   1, 
-        Offset (0x20A), 
-            ,   5, 
-        E1DC,   1, 
-        Offset (0x2AF), 
-            ,   2, 
-        SLPS,   2, 
-        Offset (0x376), 
-        EPNM,   1, 
-        DPPF,   1, 
-        Offset (0x3BA), 
-            ,   6, 
-        PWDE,   1, 
-        Offset (0x3BD), 
-            ,   5, 
-        ALLS,   1, 
-        Offset (0x3EF), 
-        PHYD,   1, 
-            ,   1, 
-            ,   1, 
-        US5R,   1, 
-        Offset (0x3F5), 
-        GECD,   1, 
-        Offset (0xD05), 
-        G06M,   8, 
-        G07M,   8, 
-        Offset (0xD0A), 
-        G0BM,   8, 
-        Offset (0xD0D), 
-        G0EM,   8, 
-        Offset (0xD13), 
-        G14M,   8, 
-        Offset (0xD1B), 
-        G1CM,   8, 
-        Offset (0xD1F), 
-        G20M,   8, 
-        Offset (0xD22), 
-        G23M,   8, 
-        Offset (0xD2C), 
-        G2DM,   8, 
-        Offset (0xD36), 
-        G37M,   8, 
-        Offset (0xD6F), 
-        G70M,   8, 
-        Offset (0xD75), 
-        G76M,   8, 
-        Offset (0xDA9), 
-        GAAM,   8, 
-        Offset (0xDAE), 
-        GAFM,   8, 
-        GB0M,   8, 
-        Offset (0xE7F), 
-            ,   2, 
+        Offset (0x105),
+            ,   5,
+        G06E,   1,
+        G06O,   1,
+        G06I,   1,
+        G07B,   8,
+        Offset (0x10A),
+        G0BB,   8,
+        Offset (0x10D),
+        G0EB,   8,
+        Offset (0x113),
+            ,   5,
+        G14E,   1,
+        G14O,   1,
+        G14I,   1,
+            ,   5,
+        G15E,   1,
+        G15O,   1,
+        G15I,   1,
+        Offset (0x11B),
+            ,   7,
+        G1CI,   1,
+        Offset (0x11F),
+            ,   7,
+        G20I,   1,
+        Offset (0x122),
+            ,   5,
+        G23E,   1,
+        G23O,   1,
+        G23I,   1,
+        Offset (0x12B),
+            ,   5,
+        G2CE,   1,
+        G2CO,   1,
+        G2CI,   1,
+            ,   5,
+        G2DE,   1,
+        G2DO,   1,
+        G2DI,   1,
+        Offset (0x132),
+            ,   5,
+        G33E,   1,
+        G33O,   1,
+        G33I,   1,
+        Offset (0x134),
+            ,   5,
+        G35E,   1,
+        G35O,   1,
+        Offset (0x136),
+            ,   5,
+        G37E,   1,
+        G37O,   1,
+        G37I,   1,
+        Offset (0x13F),
+            ,   7,
+        G40I,   1,
+        Offset (0x164),
+            ,   7,
+        GE05,   1,
+            ,   7,
+        GE06,   1,
+        Offset (0x16E),
+            ,   7,
+        GE15,   1,
+            ,   7,
+        GE16,   1,
+        Offset (0x175),
+            ,   7,
+        GE22,   1,
+        Offset (0x1A9),
+            ,   5,
+        GAAE,   1,
+        GAAO,   1,
+        GAAI,   1,
+            ,   5,
+        GABE,   1,
+        GABO,   1,
+        Offset (0x1AE),
+        GAFB,   8,
+        GB0B,   8,
+        Offset (0x1FF),
+            ,   9,
+        GESA,   1,
+        Offset (0x207),
+            ,   5,
+        E05C,   1,
+        E06C,   1,
+        Offset (0x208),
+        E08C,   1,
+        E09C,   1,
+        Offset (0x209),
+        E10C,   1,
+        Offset (0x20A),
+            ,   5,
+        E1DC,   1,
+        Offset (0x2AF),
+            ,   2,
+        SLPS,   2,
+        Offset (0x376),
+        EPNM,   1,
+        DPPF,   1,
+        Offset (0x3BA),
+            ,   6,
+        PWDE,   1,
+        Offset (0x3BD),
+            ,   5,
+        ALLS,   1,
+        Offset (0x3EF),
+        PHYD,   1,
+            ,   1,
+            ,   1,
+        US5R,   1,
+        Offset (0x3F5),
+        GECD,   1,
+        Offset (0xD05),
+        G06M,   8,
+        G07M,   8,
+        Offset (0xD0A),
+        G0BM,   8,
+        Offset (0xD0D),
+        G0EM,   8,
+        Offset (0xD13),
+        G14M,   8,
+        Offset (0xD1B),
+        G1CM,   8,
+        Offset (0xD1F),
+        G20M,   8,
+        Offset (0xD22),
+        G23M,   8,
+        Offset (0xD2C),
+        G2DM,   8,
+        Offset (0xD36),
+        G37M,   8,
+        Offset (0xD6F),
+        G70M,   8,
+        Offset (0xD75),
+        G76M,   8,
+        Offset (0xDA9),
+        GAAM,   8,
+        Offset (0xDAE),
+        GAFM,   8,
+        GB0M,   8,
+        Offset (0xE7F),
+            ,   2,
         IMCS,   1
     }
 
     OperationRegion (ABIO, SystemIO, 0x0CD8, 0x08)
     Field (ABIO, DWordAcc, NoLock, Preserve)
     {
-        INAB,   32, 
+        INAB,   32,
         DAAB,   32
     }
 
@@ -634,10 +634,10 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
     OperationRegion (P1E0, SystemIO, P1EB, 0x04)
     Field (P1E0, ByteAcc, NoLock, Preserve)
     {
-            ,   14, 
-        PEWS,   1, 
-        WSTA,   1, 
-            ,   14, 
+            ,   14,
+        PEWS,   1,
+        WSTA,   1,
+            ,   14,
         PEWD,   1
     }
 
@@ -696,18 +696,18 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
     OperationRegion (IMIO, SystemIO, 0x3E, 0x02)
     Field (IMIO, ByteAcc, NoLock, Preserve)
     {
-        IMCX,   8, 
+        IMCX,   8,
         IMCA,   8
     }
 
     IndexField (IMCX, IMCA, ByteAcc, NoLock, Preserve)
     {
-        Offset (0x80), 
-        MSTI,   8, 
-        MITS,   8, 
-        MRG0,   8, 
-        MRG1,   8, 
-        MRG2,   8, 
+        Offset (0x80),
+        MSTI,   8,
+        MITS,   8,
+        MRG0,   8,
+        MRG1,   8,
+        MRG2,   8,
         MRG3,   8
     }
 
@@ -779,345 +779,345 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0x0014FFFF, 
-                Zero, 
-                LNKA, 
+                0x0014FFFF,
+                Zero,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0014FFFF, 
-                One, 
-                LNKB, 
+                0x0014FFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0014FFFF, 
-                0x02, 
-                LNKC, 
+                0x0014FFFF,
+                0x02,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0014FFFF, 
-                0x03, 
-                LNKD, 
+                0x0014FFFF,
+                0x03,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0011FFFF, 
-                Zero, 
-                LNKD, 
+                0x0011FFFF,
+                Zero,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                Zero, 
-                LNKB, 
+                0x0015FFFF,
+                Zero,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                One, 
-                LNKC, 
+                0x0015FFFF,
+                One,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                0x02, 
-                LNKD, 
+                0x0015FFFF,
+                0x02,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                0x03, 
-                LNKA, 
+                0x0015FFFF,
+                0x03,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                Zero, 
-                LNKA, 
+                0x0004FFFF,
+                Zero,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                One, 
-                LNKB, 
+                0x0004FFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                0x02, 
-                LNKC, 
+                0x0004FFFF,
+                0x02,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                0x03, 
-                LNKD, 
+                0x0004FFFF,
+                0x03,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                Zero, 
-                LNKB, 
+                0x0005FFFF,
+                Zero,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                One, 
-                LNKC, 
+                0x0005FFFF,
+                One,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                0x02, 
-                LNKD, 
+                0x0005FFFF,
+                0x02,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                0x03, 
-                LNKA, 
+                0x0005FFFF,
+                0x03,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                Zero, 
-                LNKC, 
+                0x0006FFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                One, 
-                LNKD, 
+                0x0006FFFF,
+                One,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                0x02, 
-                LNKA, 
+                0x0006FFFF,
+                0x02,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                0x03, 
-                LNKB, 
+                0x0006FFFF,
+                0x03,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                Zero, 
-                LNKD, 
+                0x0007FFFF,
+                Zero,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                One, 
-                LNKA, 
+                0x0007FFFF,
+                One,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                0x02, 
-                LNKB, 
+                0x0007FFFF,
+                0x02,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                0x03, 
-                LNKC, 
+                0x0007FFFF,
+                0x03,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                Zero, 
-                LNKC, 
+                0x0002FFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                One, 
-                LNKD, 
+                0x0002FFFF,
+                One,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                0x02, 
-                LNKA, 
+                0x0002FFFF,
+                0x02,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                0x03, 
-                LNKB, 
+                0x0002FFFF,
+                0x03,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                Zero, 
-                LNKD, 
+                0x0003FFFF,
+                Zero,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                One, 
-                LNKA, 
+                0x0003FFFF,
+                One,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                0x02, 
-                LNKB, 
+                0x0003FFFF,
+                0x02,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                0x03, 
-                LNKC, 
+                0x0003FFFF,
+                0x03,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0012FFFF, 
-                Zero, 
-                LNKC, 
+                0x0012FFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0012FFFF, 
-                One, 
-                LNKB, 
+                0x0012FFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0013FFFF, 
-                Zero, 
-                LNKC, 
+                0x0013FFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0013FFFF, 
-                One, 
-                LNKB, 
+                0x0013FFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0016FFFF, 
-                Zero, 
-                LNKC, 
+                0x0016FFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0016FFFF, 
-                One, 
-                LNKB, 
+                0x0016FFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0010FFFF, 
-                Zero, 
-                LNKC, 
+                0x0010FFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0010FFFF, 
-                One, 
-                LNKB, 
+                0x0010FFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0001FFFF, 
-                Zero, 
-                LNKB, 
+                0x0001FFFF,
+                Zero,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0001FFFF, 
-                One, 
-                LNKC, 
+                0x0001FFFF,
+                One,
+                LNKC,
                 Zero
             }
         })
@@ -1125,345 +1125,345 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0x0014FFFF, 
-                Zero, 
-                Zero, 
+                0x0014FFFF,
+                Zero,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0014FFFF, 
-                One, 
-                Zero, 
+                0x0014FFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0014FFFF, 
-                0x02, 
-                Zero, 
+                0x0014FFFF,
+                0x02,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0014FFFF, 
-                0x03, 
-                Zero, 
+                0x0014FFFF,
+                0x03,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0011FFFF, 
-                Zero, 
-                Zero, 
+                0x0011FFFF,
+                Zero,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                Zero, 
-                Zero, 
+                0x0015FFFF,
+                Zero,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                One, 
-                Zero, 
+                0x0015FFFF,
+                One,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                0x02, 
-                Zero, 
+                0x0015FFFF,
+                0x02,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0015FFFF, 
-                0x03, 
-                Zero, 
+                0x0015FFFF,
+                0x03,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                Zero, 
-                Zero, 
+                0x0004FFFF,
+                Zero,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                One, 
-                Zero, 
+                0x0004FFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                0x02, 
-                Zero, 
+                0x0004FFFF,
+                0x02,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0004FFFF, 
-                0x03, 
-                Zero, 
+                0x0004FFFF,
+                0x03,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                Zero, 
-                Zero, 
+                0x0005FFFF,
+                Zero,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                One, 
-                Zero, 
+                0x0005FFFF,
+                One,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                0x02, 
-                Zero, 
+                0x0005FFFF,
+                0x02,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0005FFFF, 
-                0x03, 
-                Zero, 
+                0x0005FFFF,
+                0x03,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                Zero, 
-                Zero, 
+                0x0006FFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                One, 
-                Zero, 
+                0x0006FFFF,
+                One,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                0x02, 
-                Zero, 
+                0x0006FFFF,
+                0x02,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0006FFFF, 
-                0x03, 
-                Zero, 
+                0x0006FFFF,
+                0x03,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                Zero, 
-                Zero, 
+                0x0007FFFF,
+                Zero,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                One, 
-                Zero, 
+                0x0007FFFF,
+                One,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                0x02, 
-                Zero, 
+                0x0007FFFF,
+                0x02,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0007FFFF, 
-                0x03, 
-                Zero, 
+                0x0007FFFF,
+                0x03,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                Zero, 
-                Zero, 
+                0x0002FFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                One, 
-                Zero, 
+                0x0002FFFF,
+                One,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                0x02, 
-                Zero, 
+                0x0002FFFF,
+                0x02,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0002FFFF, 
-                0x03, 
-                Zero, 
+                0x0002FFFF,
+                0x03,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                Zero, 
-                Zero, 
+                0x0003FFFF,
+                Zero,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                One, 
-                Zero, 
+                0x0003FFFF,
+                One,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                0x02, 
-                Zero, 
+                0x0003FFFF,
+                0x02,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0003FFFF, 
-                0x03, 
-                Zero, 
+                0x0003FFFF,
+                0x03,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0012FFFF, 
-                Zero, 
-                Zero, 
+                0x0012FFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0012FFFF, 
-                One, 
-                Zero, 
+                0x0012FFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0013FFFF, 
-                Zero, 
-                Zero, 
+                0x0013FFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0013FFFF, 
-                One, 
-                Zero, 
+                0x0013FFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0016FFFF, 
-                Zero, 
-                Zero, 
+                0x0016FFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0016FFFF, 
-                One, 
-                Zero, 
+                0x0016FFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0010FFFF, 
-                Zero, 
-                Zero, 
+                0x0010FFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0010FFFF, 
-                One, 
-                Zero, 
+                0x0010FFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0001FFFF, 
-                Zero, 
-                Zero, 
+                0x0001FFFF,
+                Zero,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0x0001FFFF, 
-                One, 
-                Zero, 
+                0x0001FFFF,
+                One,
+                Zero,
                 0x12
             }
         })
@@ -1471,33 +1471,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKA, 
+                0xFFFF,
+                Zero,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKB, 
+                0xFFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKC, 
+                0xFFFF,
+                0x02,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKD, 
+                0xFFFF,
+                0x03,
+                LNKD,
                 Zero
             }
         })
@@ -1505,33 +1505,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x13
             }
         })
@@ -1539,33 +1539,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKB, 
+                0xFFFF,
+                Zero,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKC, 
+                0xFFFF,
+                One,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKD, 
+                0xFFFF,
+                0x02,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKA, 
+                0xFFFF,
+                0x03,
+                LNKA,
                 Zero
             }
         })
@@ -1573,33 +1573,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x10
             }
         })
@@ -1607,33 +1607,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKC, 
+                0xFFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKD, 
+                0xFFFF,
+                One,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKA, 
+                0xFFFF,
+                0x02,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKB, 
+                0xFFFF,
+                0x03,
+                LNKB,
                 Zero
             }
         })
@@ -1641,33 +1641,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x11
             }
         })
@@ -1675,33 +1675,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKD, 
+                0xFFFF,
+                Zero,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKA, 
+                0xFFFF,
+                One,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKB, 
+                0xFFFF,
+                0x02,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKC, 
+                0xFFFF,
+                0x03,
+                LNKC,
                 Zero
             }
         })
@@ -1709,33 +1709,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x12
             }
         })
@@ -1743,33 +1743,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKC, 
+                0xFFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKD, 
+                0xFFFF,
+                One,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKA, 
+                0xFFFF,
+                0x02,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKB, 
+                0xFFFF,
+                0x03,
+                LNKB,
                 Zero
             }
         })
@@ -1777,33 +1777,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x11
             }
         })
@@ -1811,33 +1811,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKD, 
+                0xFFFF,
+                Zero,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKA, 
+                0xFFFF,
+                One,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKB, 
+                0xFFFF,
+                0x02,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKC, 
+                0xFFFF,
+                0x03,
+                LNKC,
                 Zero
             }
         })
@@ -1845,33 +1845,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x12
             }
         })
@@ -1879,33 +1879,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKA, 
+                0xFFFF,
+                Zero,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKB, 
+                0xFFFF,
+                One,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKC, 
+                0xFFFF,
+                0x02,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKD, 
+                0xFFFF,
+                0x03,
+                LNKD,
                 Zero
             }
         })
@@ -1913,33 +1913,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x13
             }
         })
@@ -1947,33 +1947,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKB, 
+                0xFFFF,
+                Zero,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKC, 
+                0xFFFF,
+                One,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKD, 
+                0xFFFF,
+                0x02,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKA, 
+                0xFFFF,
+                0x03,
+                LNKA,
                 Zero
             }
         })
@@ -1981,33 +1981,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x10
             }
         })
@@ -2015,33 +2015,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKC, 
+                0xFFFF,
+                Zero,
+                LNKC,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKD, 
+                0xFFFF,
+                One,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKA, 
+                0xFFFF,
+                0x02,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKB, 
+                0xFFFF,
+                0x03,
+                LNKB,
                 Zero
             }
         })
@@ -2049,33 +2049,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x12
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x11
             }
         })
@@ -2083,33 +2083,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                LNKD, 
+                0xFFFF,
+                Zero,
+                LNKD,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                LNKA, 
+                0xFFFF,
+                One,
+                LNKA,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                LNKB, 
+                0xFFFF,
+                0x02,
+                LNKB,
                 Zero
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                LNKC, 
+                0xFFFF,
+                0x03,
+                LNKC,
                 Zero
             }
         })
@@ -2117,33 +2117,33 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x04)
             {
-                0xFFFF, 
-                Zero, 
-                Zero, 
+                0xFFFF,
+                Zero,
+                Zero,
                 0x13
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                One, 
-                Zero, 
+                0xFFFF,
+                One,
+                Zero,
                 0x10
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x02, 
-                Zero, 
+                0xFFFF,
+                0x02,
+                Zero,
                 0x11
-            }, 
+            },
 
             Package (0x04)
             {
-                0xFFFF, 
-                0x03, 
-                Zero, 
+                0xFFFF,
+                0x03,
+                Zero,
                 0x12
             }
         })
@@ -2505,63 +2505,63 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 Name (_ADR, 0x00140001)  // _ADR: Address
                 Name (UDMT, Package (0x08)
                 {
-                    0x78, 
-                    0x5A, 
-                    0x3C, 
-                    0x2D, 
-                    0x1E, 
-                    0x14, 
-                    0x0F, 
+                    0x78,
+                    0x5A,
+                    0x3C,
+                    0x2D,
+                    0x1E,
+                    0x14,
+                    0x0F,
                     Zero
                 })
                 Name (PIOT, Package (0x06)
                 {
-                    0x0258, 
-                    0x0186, 
-                    0x010E, 
-                    0xB4, 
-                    0x78, 
+                    0x0258,
+                    0x0186,
+                    0x010E,
+                    0xB4,
+                    0x78,
                     Zero
                 })
                 Name (PITR, Package (0x06)
                 {
-                    0x99, 
-                    0x47, 
-                    0x34, 
-                    0x22, 
-                    0x20, 
+                    0x99,
+                    0x47,
+                    0x34,
+                    0x22,
+                    0x20,
                     0x99
                 })
                 Name (MDMT, Package (0x04)
                 {
-                    0x01E0, 
-                    0x96, 
-                    0x78, 
+                    0x01E0,
+                    0x96,
+                    0x78,
                     Zero
                 })
                 Name (MDTR, Package (0x04)
                 {
-                    0x77, 
-                    0x21, 
-                    0x20, 
+                    0x77,
+                    0x21,
+                    0x20,
                     0xFF
                 })
                 OperationRegion (IDE, PCI_Config, 0x40, 0x20)
                 Field (IDE, AnyAcc, NoLock, Preserve)
                 {
-                    PPIT,   16, 
-                    SPIT,   16, 
-                    PMDT,   16, 
-                    SMDT,   16, 
-                    PPIC,   8, 
-                    SPIC,   8, 
-                    PPIM,   8, 
-                    SPIM,   8, 
-                    Offset (0x14), 
-                    PUDC,   2, 
-                    SUDC,   2, 
-                    Offset (0x16), 
-                    PUDM,   8, 
+                    PPIT,   16,
+                    SPIT,   16,
+                    PMDT,   16,
+                    SMDT,   16,
+                    PPIC,   8,
+                    SPIC,   8,
+                    PPIM,   8,
+                    SPIM,   8,
+                    Offset (0x14),
+                    PUDC,   2,
+                    SUDC,   2,
+                    Offset (0x16),
+                    PUDM,   8,
                     SUDM,   8
                 }
 
@@ -2569,7 +2569,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 {
                     Store (And (Arg0, 0x0F), Local0)
                     Store (ShiftRight (Arg0, 0x04), Local1)
-                    Return (Multiply (0x1E, Add (Add (Local0, One), Add (Local1, 
+                    Return (Multiply (0x1E, Add (Add (Local0, One), Add (Local1,
                         One))))
                 }
 
@@ -2912,8 +2912,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (RMBS, PCI_Config, Zero, 0x0100)
                 Field (RMBS, ByteAcc, NoLock, Preserve)
                 {
-                    Offset (0x6C), 
-                    LR2S,   16, 
+                    Offset (0x6C),
+                    LR2S,   16,
                     LR2E,   16
                 }
 
@@ -3852,114 +3852,114 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     OperationRegion (EC, EmbeddedControl, Zero, 0x0100)
                     Field (EC, ByteAcc, NoLock, Preserve)
                     {
-                        SMPR,   8, 
-                        SMST,   8, 
-                        SMAD,   8, 
-                        SMCM,   8, 
-                        SMD0,   264, 
-                        SMAA,   8, 
-                        Offset (0x2E), 
-                        BTPO,   1, 
-                        WCPO,   1, 
-                        TVPO,   1, 
-                        WLPO,   1, 
-                        GSMP,   1, 
-                        LANP,   1, 
-                        DPWR,   1, 
-                        Offset (0x2F), 
-                            ,   6, 
-                        DGEN,   1, 
-                        Offset (0x30), 
-                        POWS,   1, 
-                        LIDS,   1, 
-                        KBCS,   1, 
-                        Offset (0x31), 
-                        MBTS,   1, 
-                        MBCS,   1, 
-                        MBDS,   1, 
-                        MBFS,   1, 
-                        MBWS,   1, 
-                        MBLS,   1, 
-                        MBCL,   1, 
-                        MBFL,   1, 
-                        Offset (0x34), 
-                        HSKS,   3, 
-                            ,   1, 
-                        OSTP,   4, 
-                        Offset (0x38), 
-                        MDCL,   8, 
-                        MDCH,   8, 
-                        MDVL,   8, 
-                        MDVH,   8, 
-                        MCAL,   8, 
-                        MCAH,   8, 
-                        MSTL,   8, 
-                        MSTH,   8, 
-                        MCCL,   8, 
-                        MCCH,   8, 
-                        MPOL,   8, 
-                        MPOH,   8, 
-                        MFCL,   8, 
-                        MFCH,   8, 
-                        MCUL,   8, 
-                        MCUH,   8, 
-                        MRCL,   8, 
-                        MRCH,   8, 
-                        MVOL,   8, 
-                        MVOH,   8, 
-                        MTEL,   8, 
-                        MTEH,   8, 
-                        RSV1,   8, 
-                        RSV2,   8, 
-                        SDCL,   8, 
-                        SDCH,   8, 
-                        SDVL,   8, 
-                        SDVH,   8, 
-                        SCAL,   8, 
-                        SCAH,   8, 
-                        SSTL,   8, 
-                        SSTH,   8, 
-                        SCCL,   8, 
-                        SCCH,   8, 
-                        SPOL,   8, 
-                        SPOH,   8, 
-                        SFCL,   8, 
-                        SFCH,   8, 
-                        SCUL,   8, 
-                        SCUH,   8, 
-                        SRCL,   8, 
-                        SRCH,   8, 
-                        SVOL,   8, 
-                        SVOH,   8, 
-                        STEL,   8, 
-                        STEH,   8, 
-                        Offset (0x68), 
-                        CPUT,   8, 
-                        Offset (0x7E), 
-                            ,   3, 
-                        THFG,   1, 
-                        Offset (0x7F), 
-                        Offset (0x80), 
-                        SYST,   8, 
-                        Offset (0xBE), 
-                        AUTO,   8, 
-                            ,   1, 
-                        SUSP,   1, 
-                        Offset (0xED), 
-                        QID,    8, 
-                        Offset (0xEF), 
-                        BRTP,   8, 
-                        Offset (0xF1), 
-                        BRLV,   8, 
-                        Offset (0xFE), 
-                        DCBL,   8, 
+                        SMPR,   8,
+                        SMST,   8,
+                        SMAD,   8,
+                        SMCM,   8,
+                        SMD0,   264,
+                        SMAA,   8,
+                        Offset (0x2E),
+                        BTPO,   1,
+                        WCPO,   1,
+                        TVPO,   1,
+                        WLPO,   1,
+                        GSMP,   1,
+                        LANP,   1,
+                        DPWR,   1,
+                        Offset (0x2F),
+                            ,   6,
+                        DGEN,   1,
+                        Offset (0x30),
+                        POWS,   1,
+                        LIDS,   1,
+                        KBCS,   1,
+                        Offset (0x31),
+                        MBTS,   1,
+                        MBCS,   1,
+                        MBDS,   1,
+                        MBFS,   1,
+                        MBWS,   1,
+                        MBLS,   1,
+                        MBCL,   1,
+                        MBFL,   1,
+                        Offset (0x34),
+                        HSKS,   3,
+                            ,   1,
+                        OSTP,   4,
+                        Offset (0x38),
+                        MDCL,   8,
+                        MDCH,   8,
+                        MDVL,   8,
+                        MDVH,   8,
+                        MCAL,   8,
+                        MCAH,   8,
+                        MSTL,   8,
+                        MSTH,   8,
+                        MCCL,   8,
+                        MCCH,   8,
+                        MPOL,   8,
+                        MPOH,   8,
+                        MFCL,   8,
+                        MFCH,   8,
+                        MCUL,   8,
+                        MCUH,   8,
+                        MRCL,   8,
+                        MRCH,   8,
+                        MVOL,   8,
+                        MVOH,   8,
+                        MTEL,   8,
+                        MTEH,   8,
+                        RSV1,   8,
+                        RSV2,   8,
+                        SDCL,   8,
+                        SDCH,   8,
+                        SDVL,   8,
+                        SDVH,   8,
+                        SCAL,   8,
+                        SCAH,   8,
+                        SSTL,   8,
+                        SSTH,   8,
+                        SCCL,   8,
+                        SCCH,   8,
+                        SPOL,   8,
+                        SPOH,   8,
+                        SFCL,   8,
+                        SFCH,   8,
+                        SCUL,   8,
+                        SCUH,   8,
+                        SRCL,   8,
+                        SRCH,   8,
+                        SVOL,   8,
+                        SVOH,   8,
+                        STEL,   8,
+                        STEH,   8,
+                        Offset (0x68),
+                        CPUT,   8,
+                        Offset (0x7E),
+                            ,   3,
+                        THFG,   1,
+                        Offset (0x7F),
+                        Offset (0x80),
+                        SYST,   8,
+                        Offset (0xBE),
+                        AUTO,   8,
+                            ,   1,
+                        SUSP,   1,
+                        Offset (0xED),
+                        QID,    8,
+                        Offset (0xEF),
+                        BRTP,   8,
+                        Offset (0xF1),
+                        BRLV,   8,
+                        Offset (0xFE),
+                        DCBL,   8,
                         ACBL,   8
                     }
 
                     OperationRegion (APMP, SystemIO, 0xB2, 0x02)
                     Field (APMP, ByteAcc, NoLock, Preserve)
                     {
-                        APMC,   8, 
+                        APMC,   8,
                         APMS,   8
                     }
 
@@ -4020,25 +4020,25 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
                     Name (BIF0, Package (0x0D)
                     {
-                        One, 
-                        0x1130, 
-                        0x1130, 
-                        One, 
-                        0x39D0, 
-                        Zero, 
-                        Zero, 
-                        One, 
-                        One, 
-                        "MS-16FK", 
-                        "1", 
-                        "LION", 
+                        One,
+                        0x1130,
+                        0x1130,
+                        One,
+                        0x39D0,
+                        Zero,
+                        Zero,
+                        One,
+                        One,
+                        "MS-16FK",
+                        "1",
+                        "LION",
                         "MSI Corp."
                     })
                     Name (STAT, Package (0x04)
                     {
-                        0x02, 
-                        0x0500, 
-                        0x0800, 
+                        0x02,
+                        0x0500,
+                        0x0800,
                         0x03E8
                     })
                     Device (BAT1)
@@ -4489,152 +4489,152 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         OperationRegion (EC, EmbeddedControl, Zero, 0x0100)
                         Field (EC, ByteAcc, NoLock, Preserve)
                         {
-                            Offset (0x2B), 
-                            TD2B,   8, 
-                            TD2C,   8, 
-                            T2D0,   1, 
-                            T2D1,   4, 
-                            T2D5,   3, 
-                            TD2E,   8, 
-                            TD2F,   8, 
-                            TD30,   8, 
-                            TD31,   8, 
-                            TD32,   8, 
-                            TD33,   8, 
-                            Offset (0x35), 
-                            TD35,   8, 
-                            TD36,   8, 
-                            Offset (0x38), 
-                            TD38,   16, 
-                            TD3A,   16, 
-                            TD3C,   16, 
-                            TD3E,   16, 
-                            TD40,   16, 
-                            TD42,   16, 
-                            TD44,   16, 
-                            TD46,   16, 
-                            TD48,   16, 
-                            TD4A,   16, 
-                            TD4C,   16, 
-                            TD4E,   16, 
-                            TD50,   16, 
-                            TD52,   16, 
-                            TD54,   16, 
-                            TD56,   16, 
-                            TD58,   16, 
-                            TD5A,   16, 
-                            TD5C,   16, 
-                            TD5E,   16, 
-                            TD60,   16, 
-                            TD62,   16, 
-                            TD64,   16, 
-                            TD66,   16, 
-                            TD68,   8, 
-                            TD69,   8, 
-                            TD6A,   8, 
-                            TD6B,   8, 
-                            TD6C,   8, 
-                            TD6D,   8, 
-                            TD6E,   8, 
-                            TD6F,   8, 
-                            TD70,   8, 
-                            TD71,   8, 
-                            TD72,   8, 
-                            TD73,   8, 
-                            TD74,   8, 
-                            TD75,   8, 
-                            TD76,   8, 
-                            TD77,   8, 
-                            TD78,   8, 
-                            TD79,   8, 
-                            Offset (0x80), 
-                            TD80,   8, 
-                            TD81,   8, 
-                            TD82,   8, 
-                            TD83,   8, 
-                            TD84,   8, 
-                            TD85,   8, 
-                            TD86,   8, 
-                            TD87,   8, 
-                            TD88,   8, 
-                            TD89,   8, 
-                            TD8A,   8, 
-                            TD8B,   8, 
-                            TD8C,   8, 
-                            TD8D,   8, 
-                            TD8E,   8, 
-                            TD8F,   8, 
-                            TD90,   8, 
-                            Offset (0xA0), 
-                            TDA0,   8, 
-                            TDA1,   8, 
-                            TDA2,   8, 
-                            TDA3,   8, 
-                            TDA4,   8, 
-                            TDA5,   8, 
-                            TDA6,   8, 
-                            TDA7,   8, 
-                            TDA8,   8, 
-                            TDA9,   8, 
-                            TDAA,   8, 
-                            TDAB,   8, 
-                            TDAC,   8, 
-                            TDAD,   8, 
-                            TDAE,   8, 
-                            TDAF,   8, 
-                            TDB0,   8, 
-                            TDB1,   8, 
-                            TDB2,   8, 
-                            TDB3,   8, 
-                            TDB4,   8, 
-                            TDB5,   8, 
-                            TDB6,   8, 
-                            TDB7,   8, 
-                            TDB8,   8, 
-                            TDB9,   8, 
-                            TDBA,   8, 
-                            TDBB,   8, 
-                            TDBE,   8, 
-                            TDBF,   8, 
-                            Offset (0xC8), 
-                            TDC8,   8, 
-                            TDC9,   8, 
-                            TDCA,   8, 
-                            TDCB,   8, 
-                            TDCC,   8, 
-                            TDCD,   8, 
-                            TDCE,   8, 
-                            TDCF,   8, 
-                            Offset (0xE0), 
-                            TDE0,   8, 
-                            Offset (0xE3), 
-                            TDE3,   8, 
-                            TE40,   3, 
-                            TE43,   5, 
-                            TDE5,   8, 
-                            TDE6,   8, 
-                            TDE7,   8, 
-                            TDE8,   8, 
-                            TDE9,   8, 
-                            Offset (0xED), 
-                            TDED,   8, 
-                            TDEE,   8, 
-                            Offset (0xF0), 
-                            TDF0,   8, 
-                            TDF1,   8, 
-                            TDF2,   8, 
-                            TDF3,   8, 
-                            TDF4,   8, 
-                            TDF5,   8, 
-                            TDF6,   8, 
-                            TDF7,   8, 
-                            TDF8,   8, 
-                            TDF9,   8, 
-                            TDFA,   8, 
-                            TDFB,   8, 
-                            TDFC,   8, 
-                            TDFD,   8, 
-                            TDFE,   8, 
+                            Offset (0x2B),
+                            TD2B,   8,
+                            TD2C,   8,
+                            T2D0,   1,
+                            T2D1,   4,
+                            T2D5,   3,
+                            TD2E,   8,
+                            TD2F,   8,
+                            TD30,   8,
+                            TD31,   8,
+                            TD32,   8,
+                            TD33,   8,
+                            Offset (0x35),
+                            TD35,   8,
+                            TD36,   8,
+                            Offset (0x38),
+                            TD38,   16,
+                            TD3A,   16,
+                            TD3C,   16,
+                            TD3E,   16,
+                            TD40,   16,
+                            TD42,   16,
+                            TD44,   16,
+                            TD46,   16,
+                            TD48,   16,
+                            TD4A,   16,
+                            TD4C,   16,
+                            TD4E,   16,
+                            TD50,   16,
+                            TD52,   16,
+                            TD54,   16,
+                            TD56,   16,
+                            TD58,   16,
+                            TD5A,   16,
+                            TD5C,   16,
+                            TD5E,   16,
+                            TD60,   16,
+                            TD62,   16,
+                            TD64,   16,
+                            TD66,   16,
+                            TD68,   8,
+                            TD69,   8,
+                            TD6A,   8,
+                            TD6B,   8,
+                            TD6C,   8,
+                            TD6D,   8,
+                            TD6E,   8,
+                            TD6F,   8,
+                            TD70,   8,
+                            TD71,   8,
+                            TD72,   8,
+                            TD73,   8,
+                            TD74,   8,
+                            TD75,   8,
+                            TD76,   8,
+                            TD77,   8,
+                            TD78,   8,
+                            TD79,   8,
+                            Offset (0x80),
+                            TD80,   8,
+                            TD81,   8,
+                            TD82,   8,
+                            TD83,   8,
+                            TD84,   8,
+                            TD85,   8,
+                            TD86,   8,
+                            TD87,   8,
+                            TD88,   8,
+                            TD89,   8,
+                            TD8A,   8,
+                            TD8B,   8,
+                            TD8C,   8,
+                            TD8D,   8,
+                            TD8E,   8,
+                            TD8F,   8,
+                            TD90,   8,
+                            Offset (0xA0),
+                            TDA0,   8,
+                            TDA1,   8,
+                            TDA2,   8,
+                            TDA3,   8,
+                            TDA4,   8,
+                            TDA5,   8,
+                            TDA6,   8,
+                            TDA7,   8,
+                            TDA8,   8,
+                            TDA9,   8,
+                            TDAA,   8,
+                            TDAB,   8,
+                            TDAC,   8,
+                            TDAD,   8,
+                            TDAE,   8,
+                            TDAF,   8,
+                            TDB0,   8,
+                            TDB1,   8,
+                            TDB2,   8,
+                            TDB3,   8,
+                            TDB4,   8,
+                            TDB5,   8,
+                            TDB6,   8,
+                            TDB7,   8,
+                            TDB8,   8,
+                            TDB9,   8,
+                            TDBA,   8,
+                            TDBB,   8,
+                            TDBE,   8,
+                            TDBF,   8,
+                            Offset (0xC8),
+                            TDC8,   8,
+                            TDC9,   8,
+                            TDCA,   8,
+                            TDCB,   8,
+                            TDCC,   8,
+                            TDCD,   8,
+                            TDCE,   8,
+                            TDCF,   8,
+                            Offset (0xE0),
+                            TDE0,   8,
+                            Offset (0xE3),
+                            TDE3,   8,
+                            TE40,   3,
+                            TE43,   5,
+                            TDE5,   8,
+                            TDE6,   8,
+                            TDE7,   8,
+                            TDE8,   8,
+                            TDE9,   8,
+                            Offset (0xED),
+                            TDED,   8,
+                            TDEE,   8,
+                            Offset (0xF0),
+                            TDF0,   8,
+                            TDF1,   8,
+                            TDF2,   8,
+                            TDF3,   8,
+                            TDF4,   8,
+                            TDF5,   8,
+                            TDF6,   8,
+                            TDF7,   8,
+                            TDF8,   8,
+                            TDF9,   8,
+                            TDFA,   8,
+                            TDFB,   8,
+                            TDFC,   8,
+                            TDFD,   8,
+                            TDFE,   8,
                             TDFF,   8
                         }
 
@@ -6501,7 +6501,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (SACS, PCI_Config, Zero, 0x40)
                 Field (SACS, AnyAcc, NoLock, Preserve)
                 {
-                    Offset (0x24), 
+                    Offset (0x24),
                     STB5,   32
                 }
 
@@ -6543,21 +6543,21 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                         Field (BAR, AnyAcc, NoLock, Preserve)
                         {
-                            Offset (0x120), 
-                                ,   7, 
-                            PMBY,   1, 
-                            Offset (0x128), 
-                            PMS0,   4, 
-                            Offset (0x129), 
-                            PMS1,   4, 
-                            Offset (0x220), 
-                                ,   7, 
-                            PSBY,   1, 
-                            Offset (0x228), 
-                            PSS0,   4, 
-                            Offset (0x229), 
-                            PSS1,   4, 
-                            Offset (0x2A0), 
+                            Offset (0x120),
+                                ,   7,
+                            PMBY,   1,
+                            Offset (0x128),
+                            PMS0,   4,
+                            Offset (0x129),
+                            PMS1,   4,
+                            Offset (0x220),
+                                ,   7,
+                            PSBY,   1,
+                            Offset (0x228),
+                            PSS0,   4,
+                            Offset (0x229),
+                            PSS1,   4,
+                            Offset (0x2A0),
                                 ,   7
                         }
 
@@ -6605,9 +6605,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x128), 
-                                PMS0,   4, 
-                                Offset (0x129), 
+                                Offset (0x128),
+                                PMS0,   4,
+                                Offset (0x129),
                                 PMS1,   4
                             }
 
@@ -6627,8 +6627,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x120), 
-                                    ,   7, 
+                                Offset (0x120),
+                                    ,   7,
                                 PMBY,   1
                             }
 
@@ -6661,9 +6661,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x228), 
-                                PSS0,   4, 
-                                Offset (0x229), 
+                                Offset (0x228),
+                                PSS0,   4,
+                                Offset (0x229),
                                 PSS1,   4
                             }
 
@@ -6683,8 +6683,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x220), 
-                                    ,   7, 
+                                Offset (0x220),
+                                    ,   7,
                                 PSBY,   1
                             }
 
@@ -6742,20 +6742,20 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                         Field (BAR, AnyAcc, NoLock, Preserve)
                         {
-                            Offset (0x1A0), 
-                                ,   7, 
-                            SMBY,   1, 
-                            Offset (0x1A8), 
-                            SMS0,   4, 
-                            Offset (0x1A9), 
-                            SMS1,   4, 
-                            Offset (0x2A0), 
-                                ,   7, 
-                            SSBY,   1, 
-                            Offset (0x2A8), 
-                            SSS0,   4, 
-                            Offset (0x2A9), 
-                            SSS1,   4, 
+                            Offset (0x1A0),
+                                ,   7,
+                            SMBY,   1,
+                            Offset (0x1A8),
+                            SMS0,   4,
+                            Offset (0x1A9),
+                            SMS1,   4,
+                            Offset (0x2A0),
+                                ,   7,
+                            SSBY,   1,
+                            Offset (0x2A8),
+                            SSS0,   4,
+                            Offset (0x2A9),
+                            SSS1,   4,
                             Offset (0x2AC)
                         }
 
@@ -6803,9 +6803,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x1A8), 
-                                SMS0,   4, 
-                                Offset (0x1A9), 
+                                Offset (0x1A8),
+                                SMS0,   4,
+                                Offset (0x1A9),
                                 SMS1,   4
                             }
 
@@ -6825,8 +6825,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x1000)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x1A0), 
-                                    ,   7, 
+                                Offset (0x1A0),
+                                    ,   7,
                                 SMBY,   1
                             }
 
@@ -6859,9 +6859,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x2A8), 
-                                SSS0,   4, 
-                                Offset (0x2A9), 
+                                Offset (0x2A8),
+                                SSS0,   4,
+                                Offset (0x2A9),
                                 SSS1,   4
                             }
 
@@ -6881,8 +6881,8 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                             OperationRegion (BAR, SystemMemory, STB5, 0x0400)
                             Field (BAR, AnyAcc, NoLock, Preserve)
                             {
-                                Offset (0x2A0), 
-                                    ,   7, 
+                                Offset (0x2A0),
+                                    ,   7,
                                 SSBY,   1
                             }
 
@@ -6974,28 +6974,28 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     OperationRegion (ATFB, SystemMemory, 0x8D791018, 0x0105)
                     Field (ATFB, AnyAcc, NoLock, Preserve)
                     {
-                        BCMD,   8, 
-                        DID,    32, 
+                        BCMD,   8,
+                        DID,    32,
                         INFO,   2048
                     }
 
                     Field (ATFB, AnyAcc, NoLock, Preserve)
                     {
-                        Offset (0x05), 
-                        INF0,   8, 
-                        INF1,   8, 
-                        INF2,   8, 
-                        INF3,   8, 
-                        INF4,   8, 
-                        INF5,   8, 
-                        INF6,   8, 
+                        Offset (0x05),
+                        INF0,   8,
+                        INF1,   8,
+                        INF2,   8,
+                        INF3,   8,
+                        INF4,   8,
+                        INF5,   8,
+                        INF6,   8,
                         INF7,   8
                     }
 
                     Field (ATFB, AnyAcc, NoLock, Preserve)
                     {
-                        AccessAs (ByteAcc, 0x00), 
-                        Offset (0x05), 
+                        AccessAs (ByteAcc, 0x00),
+                        Offset (0x05),
                         INF,    8
                     }
                 }
@@ -7009,7 +7009,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (NBBR, PCI_Config, 0x1C, 0x08)
                 Field (NBBR, DWordAcc, NoLock, Preserve)
                 {
-                    BR3L,   32, 
+                    BR3L,   32,
                     BR3H,   32
                 }
 
@@ -7022,7 +7022,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (NBMS, PCI_Config, 0x60, 0x08)
                 Field (NBMS, DWordAcc, NoLock, Preserve)
                 {
-                    MIDX,   32, 
+                    MIDX,   32,
                     MIDR,   32
                 }
 
@@ -7052,7 +7052,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (NBXP, PCI_Config, 0xE0, 0x08)
                 Field (NBXP, DWordAcc, NoLock, Preserve)
                 {
-                    NBXI,   32, 
+                    NBXI,   32,
                     NBXD,   32
                 }
 
@@ -7174,15 +7174,15 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (NB2, PCI_Config, Zero, 0x0100)
                 Field (NB2, AnyAcc, NoLock, Preserve)
                 {
-                    Offset (0x60), 
-                    MI,     32, 
-                    MD,     32, 
-                    Offset (0x90), 
-                    TOM,    32, 
-                    OI,     32, 
-                    OD,     32, 
-                    Offset (0xE0), 
-                    LI,     32, 
+                    Offset (0x60),
+                    MI,     32,
+                    MD,     32,
+                    Offset (0x90),
+                    TOM,    32,
+                    OI,     32,
+                    OD,     32,
+                    Offset (0xE0),
+                    LI,     32,
                     LD,     32
                 }
 
@@ -7285,47 +7285,47 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (XPEX, SystemMemory, 0xE0018100, 0x0100)
                 Field (XPEX, DWordAcc, NoLock, Preserve)
                 {
-                    Offset (0x28), 
+                    Offset (0x28),
                     VC0S,   32
                 }
 
                 OperationRegion (PCFG, PCI_Config, Zero, 0x20)
                 Field (PCFG, DWordAcc, NoLock, Preserve)
                 {
-                    DVID,   32, 
-                    Offset (0x18), 
+                    DVID,   32,
+                    Offset (0x18),
                     SBUS,   32
                 }
 
                 OperationRegion (XPCB, PCI_Config, 0x58, 0x24)
                 Field (XPCB, AnyAcc, NoLock, Preserve)
                 {
-                    Offset (0x10), 
-                    LKCN,   16, 
-                    LKST,   16, 
-                    Offset (0x18), 
-                        ,   3, 
-                    PDC8,   1, 
-                        ,   2, 
-                    PDS8,   1, 
-                    Offset (0x19), 
-                    HPC8,   1, 
-                    Offset (0x1A), 
-                        ,   3, 
-                    PDC2,   1, 
-                        ,   2, 
-                    PDS2,   1, 
-                    Offset (0x1B), 
-                    HPCS,   1, 
-                    Offset (0x20), 
-                    Offset (0x22), 
+                    Offset (0x10),
+                    LKCN,   16,
+                    LKST,   16,
+                    Offset (0x18),
+                        ,   3,
+                    PDC8,   1,
+                        ,   2,
+                    PDS8,   1,
+                    Offset (0x19),
+                    HPC8,   1,
+                    Offset (0x1A),
+                        ,   3,
+                    PDC2,   1,
+                        ,   2,
+                    PDS2,   1,
+                    Offset (0x1B),
+                    HPCS,   1,
+                    Offset (0x20),
+                    Offset (0x22),
                     PMES,   1
                 }
 
                 OperationRegion (XPRI, PCI_Config, 0xE0, 0x08)
                 Field (XPRI, ByteAcc, NoLock, Preserve)
                 {
-                    XPIR,   32, 
+                    XPIR,   32,
                     XPID,   32
                 }
 
@@ -7610,10 +7610,10 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     OperationRegion (PCFG, PCI_Config, Zero, 0x50)
                     Field (PCFG, DWordAcc, NoLock, Preserve)
                     {
-                        DVID,   32, 
-                        Offset (0x2C), 
-                        SVID,   32, 
-                        Offset (0x4C), 
+                        DVID,   32,
+                        Offset (0x2C),
+                        SVID,   32,
+                        Offset (0x4C),
                         SMID,   32
                     }
 
@@ -7666,10 +7666,10 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                     OperationRegion (PCFG, PCI_Config, Zero, 0x50)
                     Field (PCFG, DWordAcc, NoLock, Preserve)
                     {
-                        DVID,   32, 
-                        Offset (0x2C), 
-                        SVID,   32, 
-                        Offset (0x4C), 
+                        DVID,   32,
+                        Offset (0x2C),
+                        SVID,   32,
+                        Offset (0x4C),
                         SMID,   32
                     }
                 }
@@ -7820,9 +7820,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, 0x04)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0xFF, 
-                            Zero, 
+                            Zero,
+                            0xFF,
+                            Zero,
                             Zero
                         })
                     }
@@ -7832,9 +7832,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, 0x05)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0xFF, 
-                            Zero, 
+                            Zero,
+                            0xFF,
+                            Zero,
                             Zero
                         })
                         Device (CAM0)
@@ -7899,9 +7899,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, 0x04)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0xFF, 
-                            Zero, 
+                            Zero,
+                            0xFF,
+                            Zero,
                             Zero
                         })
                     }
@@ -7911,9 +7911,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, 0x05)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0xFF, 
-                            Zero, 
+                            Zero,
+                            0xFF,
+                            Zero,
                             Zero
                         })
                         Device (CAM0)
@@ -7978,9 +7978,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, One)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0xFF, 
-                            Zero, 
+                            Zero,
+                            0xFF,
+                            Zero,
                             Zero
                         })
                     }
@@ -8003,9 +8003,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, One)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0xFF, 
-                            Zero, 
+                            Zero,
+                            0xFF,
+                            Zero,
                             Zero
                         })
                     }
@@ -8064,9 +8064,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, 0x02)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0x03, 
-                            Zero, 
+                            Zero,
+                            0x03,
+                            Zero,
                             Zero
                         })
                     }
@@ -8076,9 +8076,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         Name (_ADR, 0x04)  // _ADR: Address
                         Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                         {
-                            Zero, 
-                            0x03, 
-                            Zero, 
+                            Zero,
+                            0x03,
+                            Zero,
                             Zero
                         })
                     }
@@ -8096,9 +8096,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (PCI, PCI_Config, Zero, 0x0100)
                 Field (PCI, AnyAcc, NoLock, Preserve)
                 {
-                    Offset (0x42), 
-                    DNSP,   1, 
-                    DNSO,   1, 
+                    Offset (0x42),
+                    DNSP,   1,
+                    DNSO,   1,
                     ENSR,   1
                 }
             }
@@ -8109,24 +8109,24 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 OperationRegion (PCFG, PCI_Config, Zero, 0x50)
                 Field (PCFG, DWordAcc, NoLock, Preserve)
                 {
-                    DVID,   32, 
-                    Offset (0x2C), 
-                    SVID,   32, 
-                    Offset (0x4C), 
+                    DVID,   32,
+                    Offset (0x2C),
+                    SVID,   32,
+                    Offset (0x4C),
                     SMID,   32
                 }
 
                 OperationRegion (PCIG, PCI_Config, Zero, 0x50)
                 Field (PCIG, ByteAcc, NoLock, Preserve)
                 {
-                    Offset (0x18), 
+                    Offset (0x18),
                     GBA2,   32
                 }
 
                 OperationRegion (GFMM, SystemMemory, GBA2, 0x6000)
                 Field (GFMM, DWordAcc, NoLock, Preserve)
                 {
-                    Offset (0x5F68), 
+                    Offset (0x5F68),
                     AZPS,   32
                 }
 
@@ -8137,10 +8137,10 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
                 Name (_DOD, Package (0x05)  // _DOD: Display Output Devices
                 {
-                    0x00010100, 
-                    0x00010110, 
-                    0x0200, 
-                    0x00010210, 
+                    0x00010100,
+                    0x00010110,
+                    0x0200,
+                    0x00010210,
                     0x00010220
                 })
                 Device (LCD)
@@ -8158,108 +8158,108 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         {
                             Return (Package (0x67)
                             {
-                                0x64, 
-                                0x44, 
-                                Zero, 
-                                One, 
-                                0x02, 
-                                0x03, 
-                                0x04, 
-                                0x05, 
-                                0x06, 
-                                0x07, 
-                                0x08, 
-                                0x09, 
-                                0x0A, 
-                                0x0B, 
-                                0x0C, 
-                                0x0D, 
-                                0x0E, 
-                                0x0F, 
-                                0x10, 
-                                0x11, 
-                                0x12, 
-                                0x13, 
-                                0x14, 
-                                0x15, 
-                                0x16, 
-                                0x17, 
-                                0x18, 
-                                0x19, 
-                                0x1A, 
-                                0x1B, 
-                                0x1C, 
-                                0x1D, 
-                                0x1E, 
-                                0x1F, 
-                                0x20, 
-                                0x21, 
-                                0x22, 
-                                0x23, 
-                                0x24, 
-                                0x25, 
-                                0x26, 
-                                0x27, 
-                                0x28, 
-                                0x29, 
-                                0x2A, 
-                                0x2B, 
-                                0x2C, 
-                                0x2D, 
-                                0x2E, 
-                                0x2F, 
-                                0x30, 
-                                0x31, 
-                                0x32, 
-                                0x33, 
-                                0x34, 
-                                0x35, 
-                                0x36, 
-                                0x37, 
-                                0x38, 
-                                0x39, 
-                                0x3A, 
-                                0x3B, 
-                                0x3C, 
-                                0x3D, 
-                                0x3E, 
-                                0x3F, 
-                                0x40, 
-                                0x41, 
-                                0x42, 
-                                0x43, 
-                                0x44, 
-                                0x45, 
-                                0x46, 
-                                0x47, 
-                                0x48, 
-                                0x49, 
-                                0x4A, 
-                                0x4B, 
-                                0x4C, 
-                                0x4D, 
-                                0x4E, 
-                                0x4F, 
-                                0x50, 
-                                0x51, 
-                                0x52, 
-                                0x53, 
-                                0x54, 
-                                0x55, 
-                                0x56, 
-                                0x57, 
-                                0x58, 
-                                0x59, 
-                                0x5A, 
-                                0x5B, 
-                                0x5C, 
-                                0x5D, 
-                                0x5E, 
-                                0x5F, 
-                                0x60, 
-                                0x61, 
-                                0x62, 
-                                0x63, 
+                                0x64,
+                                0x44,
+                                Zero,
+                                One,
+                                0x02,
+                                0x03,
+                                0x04,
+                                0x05,
+                                0x06,
+                                0x07,
+                                0x08,
+                                0x09,
+                                0x0A,
+                                0x0B,
+                                0x0C,
+                                0x0D,
+                                0x0E,
+                                0x0F,
+                                0x10,
+                                0x11,
+                                0x12,
+                                0x13,
+                                0x14,
+                                0x15,
+                                0x16,
+                                0x17,
+                                0x18,
+                                0x19,
+                                0x1A,
+                                0x1B,
+                                0x1C,
+                                0x1D,
+                                0x1E,
+                                0x1F,
+                                0x20,
+                                0x21,
+                                0x22,
+                                0x23,
+                                0x24,
+                                0x25,
+                                0x26,
+                                0x27,
+                                0x28,
+                                0x29,
+                                0x2A,
+                                0x2B,
+                                0x2C,
+                                0x2D,
+                                0x2E,
+                                0x2F,
+                                0x30,
+                                0x31,
+                                0x32,
+                                0x33,
+                                0x34,
+                                0x35,
+                                0x36,
+                                0x37,
+                                0x38,
+                                0x39,
+                                0x3A,
+                                0x3B,
+                                0x3C,
+                                0x3D,
+                                0x3E,
+                                0x3F,
+                                0x40,
+                                0x41,
+                                0x42,
+                                0x43,
+                                0x44,
+                                0x45,
+                                0x46,
+                                0x47,
+                                0x48,
+                                0x49,
+                                0x4A,
+                                0x4B,
+                                0x4C,
+                                0x4D,
+                                0x4E,
+                                0x4F,
+                                0x50,
+                                0x51,
+                                0x52,
+                                0x53,
+                                0x54,
+                                0x55,
+                                0x56,
+                                0x57,
+                                0x58,
+                                0x59,
+                                0x5A,
+                                0x5B,
+                                0x5C,
+                                0x5D,
+                                0x5E,
+                                0x5F,
+                                0x60,
+                                0x61,
+                                0x62,
+                                0x63,
                                 0x64
                             })
                         }
@@ -8267,16 +8267,16 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                         {
                             Return (Package (0x0B)
                             {
-                                0x64, 
-                                0x3C, 
-                                0x14, 
-                                0x1E, 
-                                0x28, 
-                                0x32, 
-                                0x3C, 
-                                0x46, 
-                                0x50, 
-                                0x5A, 
+                                0x64,
+                                0x3C,
+                                0x14,
+                                0x1E,
+                                0x28,
+                                0x32,
+                                0x3C,
+                                0x46,
+                                0x50,
+                                0x5A,
                                 0x64
                             })
                         }
@@ -8365,48 +8365,48 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
                     Name (PBCL, Package (0x0B)
                     {
-                        0x64, 
-                        0x3C, 
-                        0x14, 
-                        0x1E, 
-                        0x28, 
-                        0x32, 
-                        0x3C, 
-                        0x46, 
-                        0x50, 
-                        0x5A, 
+                        0x64,
+                        0x3C,
+                        0x14,
+                        0x1E,
+                        0x28,
+                        0x32,
+                        0x3C,
+                        0x46,
+                        0x50,
+                        0x5A,
                         0x64
                     })
                     Name (WBCL, Package (0x0D)
                     {
-                        0x64, 
-                        0x3C, 
-                        0x05, 
-                        0x0A, 
-                        0x14, 
-                        0x1E, 
-                        0x28, 
-                        0x32, 
-                        0x3C, 
-                        0x46, 
-                        0x50, 
-                        0x5A, 
+                        0x64,
+                        0x3C,
+                        0x05,
+                        0x0A,
+                        0x14,
+                        0x1E,
+                        0x28,
+                        0x32,
+                        0x3C,
+                        0x46,
+                        0x50,
+                        0x5A,
                         0x64
                     })
                     Name (PWMP, Package (0x0D)
                     {
-                        0x64, 
-                        0x44, 
-                        0x14, 
-                        0x1C, 
-                        0x24, 
-                        0x2C, 
-                        0x34, 
-                        0x3C, 
-                        0x44, 
-                        0x4C, 
-                        0x54, 
-                        0x5C, 
+                        0x64,
+                        0x44,
+                        0x14,
+                        0x1C,
+                        0x24,
+                        0x2C,
+                        0x34,
+                        0x3C,
+                        0x44,
+                        0x4C,
+                        0x54,
+                        0x5C,
                         0x64
                     })
                     Method (BCLE, 0, NotSerialized)
@@ -8556,41 +8556,41 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         OperationRegion (PIRQ, SystemIO, 0x0C00, 0x02)
         Field (PIRQ, ByteAcc, NoLock, Preserve)
         {
-            PIDX,   8, 
+            PIDX,   8,
             PDAT,   8
         }
 
         IndexField (PIDX, PDAT, ByteAcc, NoLock, Preserve)
         {
-            PIRA,   8, 
-            PIRB,   8, 
-            PIRC,   8, 
-            PIRD,   8, 
-            PIRE,   8, 
-            PIRF,   8, 
-            PIRG,   8, 
-            PIRH,   8, 
-            Offset (0x10), 
-            PIRS,   8, 
-            Offset (0x13), 
-            HDAD,   8, 
-            Offset (0x15), 
-            GEC,    8, 
-            Offset (0x30), 
-            USB1,   8, 
-            USB2,   8, 
-            USB3,   8, 
-            USB4,   8, 
-            USB5,   8, 
-            USB6,   8, 
-            USB7,   8, 
-            Offset (0x40), 
-            IDE,    8, 
-            SATA,   8, 
-            Offset (0x50), 
-            GPP0,   8, 
-            GPP1,   8, 
-            GPP2,   8, 
+            PIRA,   8,
+            PIRB,   8,
+            PIRC,   8,
+            PIRD,   8,
+            PIRE,   8,
+            PIRF,   8,
+            PIRG,   8,
+            PIRH,   8,
+            Offset (0x10),
+            PIRS,   8,
+            Offset (0x13),
+            HDAD,   8,
+            Offset (0x15),
+            GEC,    8,
+            Offset (0x30),
+            USB1,   8,
+            USB2,   8,
+            USB3,   8,
+            USB4,   8,
+            USB5,   8,
+            USB6,   8,
+            USB7,   8,
+            Offset (0x40),
+            IDE,    8,
+            SATA,   8,
+            Offset (0x50),
+            GPP0,   8,
+            GPP1,   8,
+            GPP2,   8,
             GPP3,   8
         }
 
@@ -9202,7 +9202,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
                 If (LEqual (Arg0, 0x03))
                 {
-                    Return (AF03 (DerefOf (Index (Arg1, 0x02)), DerefOf (Index (Arg1, 
+                    Return (AF03 (DerefOf (Index (Arg1, 0x02)), DerefOf (Index (Arg1,
                         0x04))))
                 }
                 Else
@@ -9633,7 +9633,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         OperationRegion (REVD, SystemMemory, 0x8D79111D, 0x00010004)
         Field (REVD, AnyAcc, NoLock, Preserve)
         {
-            SROM,   32, 
+            SROM,   32,
             VROM,   524288
         }
 
@@ -10098,16 +10098,16 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
     Field (ERMM, AnyAcc, NoLock, Preserve)
     {
-        Offset (0x1BE), 
-            ,   5, 
-        GBFE,   1, 
-        GBFO,   1, 
-        GBFI,   1, 
-            ,   5, 
-        GC0E,   1, 
-        GC0O,   1, 
-        GC0I,   1, 
-        Offset (0xD32), 
+        Offset (0x1BE),
+            ,   5,
+        GBFE,   1,
+        GBFO,   1,
+        GBFI,   1,
+            ,   5,
+        GC0E,   1,
+        GC0O,   1,
+        GC0I,   1,
+        Offset (0xD32),
         G33M,   8
     }
 
@@ -10157,101 +10157,101 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
         {
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
-            }, 
+            },
 
             Package (0x06)
             {
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
-                0xFFFF, 
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
+                0xFFFF,
                 0xFFFF
             }
         })
@@ -10264,7 +10264,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 Store (DAT0, TYPE)
                 If (LAnd (LEqual (TBLD, Zero), LNotEqual (NPSS, Zero)))
                 {
-                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR, 
+                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR,
                         Zero)))
                     {
                         Store (One, TBLD)
@@ -10283,7 +10283,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 Store (DAT0, TYPE)
                 If (LAnd (LEqual (TBLD, Zero), LNotEqual (NPSS, Zero)))
                 {
-                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR, 
+                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR,
                         Zero)))
                     {
                         Store (One, TBLD)
@@ -10302,7 +10302,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 Store (DAT0, TYPE)
                 If (LAnd (LEqual (TBLD, Zero), LNotEqual (NPSS, Zero)))
                 {
-                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR, 
+                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR,
                         Zero)))
                     {
                         Store (One, TBLD)
@@ -10321,7 +10321,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
                 Store (DAT0, TYPE)
                 If (LAnd (LEqual (TBLD, Zero), LNotEqual (NPSS, Zero)))
                 {
-                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR, 
+                    If (LOr (LEqual (And (TYPE, 0x1B), 0x1B), LEqual (DCOR,
                         Zero)))
                     {
                         Store (One, TBLD)
@@ -10398,18 +10398,18 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
 
     Name (_S0, Package (0x04)  // _S0_: S0 System State
     {
-        Zero, 
-        Zero, 
-        Zero, 
+        Zero,
+        Zero,
+        Zero,
         Zero
     })
     If (SS3)
     {
         Name (_S3, Package (0x04)  // _S3_: S3 System State
         {
-            0x03, 
-            Zero, 
-            Zero, 
+            0x03,
+            Zero,
+            Zero,
             Zero
         })
     }
@@ -10418,18 +10418,18 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
     {
         Name (_S4, Package (0x04)  // _S4_: S4 System State
         {
-            0x04, 
-            Zero, 
-            Zero, 
+            0x04,
+            Zero,
+            Zero,
             Zero
         })
     }
 
     Name (_S5, Package (0x04)  // _S5_: S5 System State
     {
-        0x05, 
-        Zero, 
-        Zero, 
+        0x05,
+        Zero,
+        Zero,
         Zero
     })
     Method (PTS, 1, NotSerialized)
@@ -10459,7 +10459,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 2, "MSI_NB", "MEGABOOK", 0x00000000)
  * Intel ACPI Component Architecture
  * AML Disassembler version 20130117-64 [Jul 11 2015]
  * Copyright (c) 2000 - 2013 Intel Corporation
- * 
+ *
  * Disassembly of ssdt1.dat, Sat Jul 11 16:21:23 2015
  *
  * Original Table Header:
@@ -10489,16 +10489,16 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x00000000C0010062, // Address
                     ,)
-            }, 
+            },
 
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x0000000000000000, // Address
@@ -10509,41 +10509,41 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
-                0x00000000, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
+                0x00000000,
                 0x00000000
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000001, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
+                0x00000001,
                 0x00000001
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                0x00000002, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
+                0x00000002,
                 0x00000002
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000003, 
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                0x00000003,
                 0x00000003
             }
         })
@@ -10551,105 +10551,105 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x08)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }
-            }, 
-
-            Package (0x08)
-            {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                }
+            },
+
+            Package (0x08)
+            {
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
@@ -10661,10 +10661,10 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x05)
             {
-                0x05, 
-                0x00, 
-                0x00000000, 
-                0x000000FC, 
+                0x05,
+                0x00,
+                0x00000000,
+                0x000000FC,
                 0x00000004
             }
         })
@@ -10676,21 +10676,21 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
 
         Name (_CST, Package (0x02)  // _CST: C-States
         {
-            0x01, 
+            0x01,
             Package (0x04)
             {
                 ResourceTemplate ()
                 {
-                    Register (SystemIO, 
+                    Register (SystemIO,
                         0x08,               // Bit Width
                         0x00,               // Bit Offset
                         0x0000000000001771, // Address
                         0x01,               // Access Size
                         )
-                }, 
+                },
 
-                0x02, 
-                0x0064, 
+                0x02,
+                0x0064,
                 0x00000000
             }
         })
@@ -10698,11 +10698,11 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x06, 
-                0x00, 
-                0x00000000, 
-                0x000000FE, 
-                0x00000002, 
+                0x06,
+                0x00,
+                0x00000000,
+                0x000000FE,
+                0x00000002,
                 0x00000000
             }
         })
@@ -10714,16 +10714,16 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x00000000C0010062, // Address
                     ,)
-            }, 
+            },
 
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x0000000000000000, // Address
@@ -10734,41 +10734,41 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
-                0x00000000, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
+                0x00000000,
                 0x00000000
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000001, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
+                0x00000001,
                 0x00000001
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                0x00000002, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
+                0x00000002,
                 0x00000002
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000003, 
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                0x00000003,
                 0x00000003
             }
         })
@@ -10776,105 +10776,105 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x08)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }
-            }, 
-
-            Package (0x08)
-            {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                }
+            },
+
+            Package (0x08)
+            {
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
@@ -10886,10 +10886,10 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x05)
             {
-                0x05, 
-                0x00, 
-                0x00000000, 
-                0x000000FC, 
+                0x05,
+                0x00,
+                0x00000000,
+                0x000000FC,
                 0x00000004
             }
         })
@@ -10901,21 +10901,21 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
 
         Name (_CST, Package (0x02)  // _CST: C-States
         {
-            0x01, 
+            0x01,
             Package (0x04)
             {
                 ResourceTemplate ()
                 {
-                    Register (SystemIO, 
+                    Register (SystemIO,
                         0x08,               // Bit Width
                         0x00,               // Bit Offset
                         0x0000000000001771, // Address
                         0x01,               // Access Size
                         )
-                }, 
+                },
 
-                0x02, 
-                0x0064, 
+                0x02,
+                0x0064,
                 0x00000000
             }
         })
@@ -10923,11 +10923,11 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x06, 
-                0x00, 
-                0x00000000, 
-                0x000000FE, 
-                0x00000002, 
+                0x06,
+                0x00,
+                0x00000000,
+                0x000000FE,
+                0x00000002,
                 0x00000000
             }
         })
@@ -10939,16 +10939,16 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x00000000C0010062, // Address
                     ,)
-            }, 
+            },
 
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x0000000000000000, // Address
@@ -10959,41 +10959,41 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
-                0x00000000, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
+                0x00000000,
                 0x00000000
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000001, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
+                0x00000001,
                 0x00000001
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                0x00000002, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
+                0x00000002,
                 0x00000002
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000003, 
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                0x00000003,
                 0x00000003
             }
         })
@@ -11001,105 +11001,105 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x08)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }
-            }, 
-
-            Package (0x08)
-            {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                }
+            },
+
+            Package (0x08)
+            {
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
@@ -11111,10 +11111,10 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x05)
             {
-                0x05, 
-                0x00, 
-                0x00000000, 
-                0x000000FC, 
+                0x05,
+                0x00,
+                0x00000000,
+                0x000000FC,
                 0x00000004
             }
         })
@@ -11126,21 +11126,21 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
 
         Name (_CST, Package (0x02)  // _CST: C-States
         {
-            0x01, 
+            0x01,
             Package (0x04)
             {
                 ResourceTemplate ()
                 {
-                    Register (SystemIO, 
+                    Register (SystemIO,
                         0x08,               // Bit Width
                         0x00,               // Bit Offset
                         0x0000000000001771, // Address
                         0x01,               // Access Size
                         )
-                }, 
+                },
 
-                0x02, 
-                0x0064, 
+                0x02,
+                0x0064,
                 0x00000000
             }
         })
@@ -11148,11 +11148,11 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x06, 
-                0x00, 
-                0x00000001, 
-                0x000000FE, 
-                0x00000002, 
+                0x06,
+                0x00,
+                0x00000001,
+                0x000000FE,
+                0x00000002,
                 0x00000000
             }
         })
@@ -11164,16 +11164,16 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x00000000C0010062, // Address
                     ,)
-            }, 
+            },
 
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (FFixedHW,
                     0x40,               // Bit Width
                     0x00,               // Bit Offset
                     0x0000000000000000, // Address
@@ -11184,41 +11184,41 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
-                0x00000000, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
+                0x00000000,
                 0x00000000
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000001, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
+                0x00000001,
                 0x00000001
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                0x00000002, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
+                0x00000002,
                 0x00000002
-            }, 
+            },
 
             Package (0x06)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
-                0x00000003, 
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                0x00000003,
                 0x00000003
             }
         })
@@ -11226,105 +11226,105 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x08)
             {
-                0x000009C4, 
-                0x00001950, 
-                0x00000004, 
-                0x00000004, 
+                0x000009C4,
+                0x00001950,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000834, 
-                0x0000142F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000834,
+                0x0000142F,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }
-            }, 
-
-            Package (0x08)
-            {
-                0x00000708, 
-                0x00000EC4, 
-                0x00000004, 
-                0x00000004, 
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
-
-                Buffer (0x08)
-                {
-                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                 }
-            }, 
+            },
 
             Package (0x08)
             {
-                0x00000578, 
-                0x00000B9F, 
-                0x00000004, 
-                0x00000004, 
+                0x00000708,
+                0x00000EC4,
+                0x00000004,
+                0x00000004,
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
-                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                     0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
                      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                }, 
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                }
+            },
+
+            Package (0x08)
+            {
+                0x00000578,
+                0x00000B9F,
+                0x00000004,
+                0x00000004,
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
+
+                Buffer (0x08)
+                {
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                },
 
                 Buffer (0x08)
                 {
@@ -11336,10 +11336,10 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x05)
             {
-                0x05, 
-                0x00, 
-                0x00000000, 
-                0x000000FC, 
+                0x05,
+                0x00,
+                0x00000000,
+                0x000000FC,
                 0x00000004
             }
         })
@@ -11351,21 +11351,21 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
 
         Name (_CST, Package (0x02)  // _CST: C-States
         {
-            0x01, 
+            0x01,
             Package (0x04)
             {
                 ResourceTemplate ()
                 {
-                    Register (SystemIO, 
+                    Register (SystemIO,
                         0x08,               // Bit Width
                         0x00,               // Bit Offset
                         0x0000000000001771, // Address
                         0x01,               // Access Size
                         )
-                }, 
+                },
 
-                0x02, 
-                0x0064, 
+                0x02,
+                0x0064,
                 0x00000000
             }
         })
@@ -11373,11 +11373,11 @@ DefinitionBlock ("ssdt1.aml", "SSDT", 1, "AMD   ", "PUMORI  ", 0x00000001)
         {
             Package (0x06)
             {
-                0x06, 
-                0x00, 
-                0x00000001, 
-                0x000000FE, 
-                0x00000002, 
+                0x06,
+                0x00,
+                0x00000001,
+                0x000000FE,
+                0x00000002,
                 0x00000000
             }
         })
