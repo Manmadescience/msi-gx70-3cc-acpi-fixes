@@ -2,3 +2,4 @@
 *.aml
 *.dat
 *.hex
+**/dumps/
