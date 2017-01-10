@@ -11027,6 +11027,7 @@ DefinitionBlock ("", "SSDT", 2, "AMD   ", "PUMORI  ", 0x00000001)
 
             A072 = A012 (Local1, 0x68)
             A066 (Local1, 0x68, ~0x03, 0x00)
+            Return (0x00)
         }
 
         Method (A068, 1, Serialized)
@@ -11070,6 +11071,7 @@ DefinitionBlock ("", "SSDT", 2, "AMD   ", "PUMORI  ", 0x00000001)
                     Local4++
                 }
             }
+            Return (0x00)
         }
 
         Method (A061, 2, NotSerialized)
@@ -11694,6 +11696,7 @@ DefinitionBlock ("", "SSDT", 2, "AMD   ", "PUMORI  ", 0x00000001)
                     Local4++
                 }
             }
+            Return (0x00)
         }
 
         Name (AD01, 0xE0000000)
@@ -11904,6 +11907,7 @@ DefinitionBlock ("", "SSDT", 2, "AMD   ", "PUMORI  ", 0x00000001)
                 Local0 = ABDA /* \_SB_.A073.ABDA */
                 Local0 = ((Local0 & 0xFFFFFFFC) | Arg0)
                 ABDA = Local0
+                Return (0x00)
             }
         }
 
