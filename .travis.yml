@@ -1,8 +1,4 @@
-addons:
-    apt:
-        packages:
-            - iasl
-
+dist: trusty
 language: bash
 
 script:
