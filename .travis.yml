@@ -4,6 +4,6 @@ language: bash
 script:
     - wget -qO - "https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz" | tar xz
     - cd acpica-unix-20161222/
-    - make clean && make -j3 iasl
+    - make clean > /dev/null && make -j3 iasl > /dev/null
     - cd ../msi-gx70-3cc/dsl/
     - ../../acpica-unix-20161222/generate/unix/bin/iasl -tc dsdt.dsl
