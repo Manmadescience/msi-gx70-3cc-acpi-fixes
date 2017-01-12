@@ -7,7 +7,7 @@ language: bash
 
 script:
     - wget https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz
-    - tar xzvf acpica-unix-20161222.tar.gz
+    - wget -qO - "https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz" | tar xvz
     - cd acpica-unix-20161222/
     - make clean && make -j3 iasl
     - cd ..
