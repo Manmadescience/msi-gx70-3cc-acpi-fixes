@@ -2,9 +2,9 @@ dist: trusty
 language: bash
 
 script:
-    - wget https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz
-    - wget -qO - "https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz" | tar xvz
+    - wget -qO - "https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz" | tar xz
     - cd acpica-unix-20161222/
     - make clean && make -j3 iasl
     - cd ..
+    - pwd
     - acpica-unix-20161222/generate/unix/bin/iasl -tc dsdt.dsl
