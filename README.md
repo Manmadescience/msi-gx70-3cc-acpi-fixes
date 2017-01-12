@@ -17,4 +17,4 @@ $ iasl -e *.dat -d ssdt2.dat
 -------
 DSDT compilation status
 
-[![Build Status](https://travis-ci.org/hoefling/msi-gx70-3cc-acpi-fixes.svg?branch=master)](https://travis-ci.org/hoefling/msi-gx70-3cc-acpi-fixes)
+[![Build Status](https://travis-ci.org/hoefling/acpi-fixes.svg?branch=master)](https://travis-ci.org/hoefling/acpi-fixes)
