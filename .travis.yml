@@ -6,4 +6,9 @@ addons:
 language: bash
 
 script:
-    - iasl -tc dsdt.dsl
+    - wget https://acpica.org/sites/acpica/files/acpica-unix-20161222.tar.gz
+    - tar xzvf acpica-unix-20161222.tar.gz
+    - cd acpica-unix-20161222/
+    - make clean && make -j3 iasl
+    - cd ..
+    - acpica-unix-20161222/generate/unix/bin/iasl -tc dsdt.dsl
